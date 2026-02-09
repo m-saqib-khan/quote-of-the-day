@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quote of the Day</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        background: radial-gradient(circle at top, #fff6e5, #f7efe7);
+        color: #1f1f1f;
+        width: 320px;
+      }
+
+      .container {
+        padding: 18px 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #5a3d1e;
+      }
+
+      .quote {
+        font-size: 16px;
+        line-height: 1.4;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 14px;
+        box-shadow: 0 8px 16px rgba(82, 61, 36, 0.12);
+        min-height: 92px;
+      }
+
+      .quote-text {
+        margin: 0 0 10px;
+      }
+
+      .quote-author {
+        margin: 0;
+        font-size: 13px;
+        color: #6a4b2f;
+        text-align: right;
+      }
+
+      button {
+        appearance: none;
+        border: none;
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        background: #7a4b21;
+        color: #ffffff;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        box-shadow: 0 6px 14px rgba(122, 75, 33, 0.24);
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 18px rgba(122, 75, 33, 0.28);
+      }
+
+      button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(122, 75, 33, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Daily Motivation</h1>
+      <div class="quote" role="status" aria-live="polite">
+        <p class="quote-text" id="quoteText">Loading quote...</p>
+        <p class="quote-author" id="quoteAuthor"></p>
+      </div>
+      <button id="newQuoteButton" type="button">New Quote</button>
+    </div>
+
+    <script src="quotes.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
